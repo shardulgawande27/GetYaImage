@@ -56,4 +56,22 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 480px) {
+  .user-info{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .user-info img{
+    width: 40%;
+  }
+
+  .extra-info{
+    column-gap: 75px;
+  }
+
+}
+
+
 

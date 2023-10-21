@@ -35,7 +35,7 @@ const Image = ({ data }) => {
             <div className="extra-info my-10 px-5  ">
               <div className="user-info flex gap-x-5">
                 <img
-                  className="w-10 rounded-full"
+                  className="w-10  rounded-full"
                   src={data.user.profile_image.small}
                   alt={data.alt_description}
                 />
@@ -148,6 +148,7 @@ const Image = ({ data }) => {
               <i className="fa-regular fa-thumbs-up"></i>
               &nbsp;&nbsp;{formattedLikes}
             </li>
+            {/* <li>{format(new Date(data.created_at), "dd MMMM yyyy")}</li> */}
           </ul>
         </div>
       </div>
