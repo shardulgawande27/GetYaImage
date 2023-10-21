@@ -27,15 +27,60 @@ const SearchField = ({ toggleTheme, theme }) => {
   let timeout;
 
   const fetchSearchResults = (query) => {
-    // Simulated options (replace with your own data)
-    const simulatedOptions = ["Option 1", "Option 2", "Option 3", "Option 4"];
+    const simulatedOptions = [
+      "Mountain View",
+      "Sunset Beach",
+      "Vintage Car",
+      "Space Nebula",
+      "Summer Vacation",
+      "Rainforest Canopy",
+      "Desert Oasis",
+      "Urban Street Art",
+      "Snowy Mountain Peaks",
+      "Tropical Paradise",
+      "Abstract Architecture",
+      "Waterfall Cascade",
+      "Autumn Leaves",
+      "Moonlit Ocean",
+      "Enchanted Forest",
+      "City Skylines",
+      "Wildflower Meadow",
+      "Rustic Barn",
+      "Galaxy Cluster",
+      "Futuristic City",
+      "Desert Dunes",
+      "Serene Lake",
+      "Starry Night",
+      "Lush Garden",
+      "Alien Landscape",
+      "Rural Countryside",
+      "Underwater World",
+      "Mystical Caves",
+      "Aerial Cityscape",
+      "Antique Shop",
+      "Tropical Rainforest",
+      "Cozy Cabin",
+      "Exotic Wildlife",
+      "Historic Castle",
+      "Vibrant Street Market",
+      "Starship Interior",
+      "Magical Waterfall",
+      "Moon Base",
+      "Sunrise Over Lake",
+      "Peaceful Meadow",
+      "Tropical Islands",
+      "Ancient Ruins",
+      "City Park at Night",
+      "Coral Reef",
+      "Amusement Park",
+    ];
+
     const filteredOptions = simulatedOptions.filter((option) =>
       option.toLowerCase().includes(query.toLowerCase())
     );
     setDropdownOptions(filteredOptions);
     setShowDropdown(true);
 
-    // Perform real-time search here using 'query'
     fetchData(
       `search/photos?page=1&per_page=30&query=${query}&client_id=5QFD9BeQPiDRmWbMmF9aqn3y_VqyiN_K0FZkqh9OJC4`
     );
@@ -46,7 +91,7 @@ const SearchField = ({ toggleTheme, theme }) => {
     setSearchValue(option);
     setDropdownOptions([]);
     setShowDropdown(false);
-    // Perform the search with the selected option
+
     fetchData(
       `search/photos?page=1&per_page=30&query=${option}&client_id=5QFD9BeQPiDRmWbMmF9aqn3y_VqyiN_K0FZkqh9OJC4`
     );
