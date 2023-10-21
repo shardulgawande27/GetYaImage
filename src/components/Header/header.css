@@ -1,0 +1,8 @@
+.head{
+    background-image: url(../../assets/img2.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% ;
+    object-fit: contain;
+}
