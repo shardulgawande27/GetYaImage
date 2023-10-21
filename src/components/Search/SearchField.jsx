@@ -34,12 +34,18 @@ const SearchField = ({ toggleTheme, theme }) => {
     );
     setDropdownOptions(filteredOptions);
     setShowDropdown(true);
+
+    // Perform real-time search here using 'query'
+    fetchData(
+      `search/photos?page=1&per_page=30&query=${query}&client_id=5QFD9BeQPiDRmWbMmF9aqn3y_VqyiN_K0FZkqh9OJC4`
+    );
+    setSearchImage(query);
   };
 
   const selectOption = (option) => {
     setSearchValue(option);
     setDropdownOptions([]);
-    setShowDropdown(false); // Hide the dropdown
+    setShowDropdown(false);
     // Perform the search with the selected option
     fetchData(
       `search/photos?page=1&per_page=30&query=${option}&client_id=5QFD9BeQPiDRmWbMmF9aqn3y_VqyiN_K0FZkqh9OJC4`
